@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fall Farm Stand Trail</title>
+<style>
+body{margin:0;font-family:Georgia,serif;background:#fffaf0;color:#435044}
+.wrap{max-width:680px;margin:auto;padding:22px 16px 40px}
+header{text-align:center;padding:12px 8px 20px}
+.eyebrow{font-size:.85rem;letter-spacing:2px;text-transform:uppercase;color:#765b45}
+h1{margin:7px 0 6px;font-size:2rem}.subtitle{line-height:1.5}
+.progress{height:9px;background:#e5ddcc;border-radius:99px;overflow:hidden;margin:8px 0 22px}
+.progress-bar{height:100%;width:16.666%;background:#8da58a;transition:width .3s}
+.stop,.finish{background:white;border:1px solid #e4dccd;border-radius:22px;padding:24px 20px;box-shadow:0 5px 18px rgba(67,80,68,.08)}
+.stop{display:none}.stop.active,.finish.active{display:block}
+.number{display:inline-block;background:#8da58a;color:white;border-radius:999px;padding:6px 12px;font-size:.85rem;margin-bottom:10px}
+h2{margin:4px 0 12px;font-size:1.55rem}
+.address{background:#f5efe3;border-radius:14px;padding:13px;line-height:1.45;margin:12px 0 16px}
+.coordinate-note{font-size:.9rem;color:#6b746b}
+.code-box{border:2px dashed #e9b99a;border-radius:16px;padding:16px;margin:18px 0;background:#fffaf6}
+.code-box strong{display:block;margin-bottom:5px}
+a.button,button{display:block;width:100%;border:0;border-radius:14px;padding:14px 16px;font:inherit;font-weight:bold;cursor:pointer;text-align:center;text-decoration:none}
+a.button{background:#765b45;color:white;margin-bottom:11px}
+button{background:#8da58a;color:white}
+.finish{text-align:center;display:none}
+.small{font-size:.9rem;color:#687168;line-height:1.5}
+.reset{background:transparent;color:#765b45;border:1px solid #d8cbb9;margin-top:16px;font-size:.9rem}
+footer{text-align:center;margin-top:18px;font-size:.8rem;color:#7b817b}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+<div class="eyebrow">Fall Farm Stand Trail</div>
+<h1>Find the Code. Complete the Passport. Enter to Win!</h1>
+<p class="subtitle">Visit each stop, find the unique code word, and write it in the matching spot in your passport.</p>
+</header>
+<div class="progress"><div class="progress-bar" id="progressBar"></div></div>
+<main>
+
+<section class="stop" data-stop="1">
+<div class="number">Stop 1 of 6</div><h2>Artie's Farm Stand</h2>
+<div class="address">5285 Estes<br>Spencer, IN 47460</div>
+<a class="button" href="https://www.google.com/maps/dir/?api=1&destination=5285+Estes%2C+Spencer%2C+IN+47460" target="_blank">📍 Navigate to Stop 1</a>
+<div class="code-box"><strong>🔎 Find the code word!</strong>Look around the stop for the unique code word, then write it in the Stop 1 spot in your passport.</div>
+<button onclick="nextStop()">I Found the Code Word — Next Stop</button>
+</section>
+
+<section class="stop" data-stop="2">
+<div class="number">Stop 2 of 6</div><h2>Crumb &amp; Get It</h2>
+<div class="address">480 W Indiana Ave<br>Spencer, IN 47460</div>
+<a class="button" href="https://www.google.com/maps/dir/?api=1&destination=480+W+Indiana+Ave%2C+Spencer%2C+IN+47460" target="_blank">📍 Navigate to Stop 2</a>
+<div class="code-box"><strong>🔎 Find the code word!</strong>Look around the stop for the unique code word, then write it in the Stop 2 spot in your passport.</div>
+<button onclick="nextStop()">I Found the Code Word — Next Stop</button>
+</section>
+
+<section class="stop" data-stop="3">
+<div class="number">Stop 3 of 6</div><h2>KayC's Country Corner</h2>
+<div class="address">📍 GPS Location<br><span class="coordinate-note">39.25909, -86.8054</span></div>
+<a class="button" href="https://www.google.com/maps/dir/?api=1&destination=39.25909%2C-86.8054" target="_blank">📍 Navigate to Stop 3</a>
+<div class="code-box"><strong>🔎 Find the code word!</strong>Look around the stop for the unique code word, then write it in the Stop 3 spot in your passport.</div>
+<button onclick="nextStop()">I Found the Code Word — Next Stop</button>
+</section>
+
+<section class="stop" data-stop="4">
+<div class="number">Stop 4 of 6</div><h2>Under The Evergreens</h2>
+<div class="address">6598 Jackson Rd<br>Worthington, IN 47471</div>
+<a class="button" href="https://www.google.com/maps/dir/?api=1&destination=6598+Jackson+Rd%2C+Worthington%2C+IN+47471" target="_blank">📍 Navigate to Stop 4</a>
+<div class="code-box"><strong>🔎 Find the code word!</strong>Look around the stop for the unique code word, then write it in the Stop 4 spot in your passport.</div>
+<button onclick="nextStop()">I Found the Code Word — Next Stop</button>
+</section>
+
+<section class="stop" data-stop="5">
+<div class="number">Stop 5 of 6</div><h2>Coal &amp; River</h2>
+<div class="address">1151 S Byerly Rd<br>Freedom, IN 47431</div>
+<a class="button" href="https://www.google.com/maps/dir/?api=1&destination=1151+S+Byerly+Rd%2C+Freedom%2C+IN+47431" target="_blank">📍 Navigate to Stop 5</a>
+<div class="code-box"><strong>🔎 Find the code word!</strong>Look around the stop for the unique code word, then write it in the Stop 5 spot in your passport.</div>
+<button onclick="nextStop()">I Found the Code Word — Next Stop</button>
+</section>
+
+<section class="stop" data-stop="6">
+<div class="number">Stop 6 of 6</div><h2>Rolling Acres Farm Stand</h2>
+<div class="address">5978 IN-46<br>Cory, IN 47846</div>
+<a class="button" href="https://www.google.com/maps/dir/?api=1&destination=5978+IN-46%2C+Cory%2C+IN+47846" target="_blank">📍 Navigate to Stop 6</a>
+<div class="code-box"><strong>🔎 Find the code word!</strong>Look around the stop for the unique code word, then write it in the Stop 6 spot in your passport.</div>
+<button onclick="finishTrail()">I Found the Code Word — Finish the Trail!</button>
+</section>
+
+</main>
+<section class="finish" id="finish">
+<div class="number">Trail Complete! 🌿</div>
+<h2>You Completed the Trail!</h2>
+<p>Make sure all six code words are written in your passport.</p>
+<p><strong>Turn in your completed passport to enter the prize drawing!</strong></p>
+<p class="small">Thank you for supporting our local farm stands and small businesses!</p>
+<button class="reset" onclick="resetTrail()">Start Over</button>
+</section>
+<footer>Fall Farm Stand Trail • Enjoy the adventure!</footer>
+</div>
+<script>
+const totalStops=6;
+let current=parseInt(localStorage.getItem("trailStop")||"1",10);
+function showStop(n){
+current=Math.min(Math.max(n,1),totalStops);
+localStorage.setItem("trailStop",current);
+document.querySelectorAll(".stop").forEach(e=>e.classList.toggle("active",Number(e.dataset.stop)===current));
+document.getElementById("finish").classList.remove("active");
+document.getElementById("progressBar").style.width=(current/totalStops*100)+"%";
+window.scrollTo({top:0,behavior:"smooth"});
+}
+function nextStop(){if(current<totalStops)showStop(current+1)}
+function finishTrail(){
+localStorage.setItem("trailStop",totalStops);
+document.querySelectorAll(".stop").forEach(e=>e.classList.remove("active"));
+document.getElementById("finish").classList.add("active");
+document.getElementById("progressBar").style.width="100%";
+window.scrollTo({top:0,behavior:"smooth"});
+}
+function resetTrail(){localStorage.removeItem("trailStop");showStop(1)}
+showStop(current);
+</script>
+</body>
+</html>
